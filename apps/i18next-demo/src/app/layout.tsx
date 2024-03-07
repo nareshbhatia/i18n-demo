@@ -1,21 +1,24 @@
-import { Inter } from 'next/font/google';
-import type * as React from 'react';
+import type { Metadata } from 'next';
+import { Inter, Roboto_Mono as RobotoMono } from 'next/font/google';
 import './globals.css';
 
 /*
- * Load the Inter font using next/font/google. For details, see
- * https://beta.nextjs.org/docs/optimizing/fonts
+ * Load the fonts using next/font/google. For details, see
+ * https://nextjs.org/docs/pages/building-your-application/optimizing/fonts#with-tailwind-css
  */
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+});
+const robotoMono = RobotoMono({
+  subsets: ['latin'],
+  variable: '--font-roboto-mono',
+});
 
-/*
- * This is causing jest to fail when collecting coverage
- * See https://github.com/vercel/next.js/issues/47299
- * export const metadata = {
- *   title: 'I18next Demo',
- *   description: 'I18next Demo',
- * };
- */
+export const metadata: Metadata = {
+  title: 'i18next Demo',
+  description: 'i18next Demo',
+};
 
 interface RootLayoutProps {
   children: React.ReactNode;
@@ -23,8 +26,13 @@ interface RootLayoutProps {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html
+      className={`${inter.variable} ${robotoMono.variable}`}
+      lang="en"
+      suppressHydrationWarning
+    >
+      <head />
+      <body className="min-h-screen font-sans antialiased">{children}</body>
     </html>
   );
 }
