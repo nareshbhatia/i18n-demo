@@ -4,6 +4,8 @@
     "clsx",
     "commitlint",
     "copyfiles",
+    "lucide",
+    "manypkg",
     "nextjs",
     "postdeploy",
     "roboto",

@@ -24,6 +24,8 @@
     "format": "run-s _format:root _format:rest",
     "graph": "turbo run build --graph",
     "lint": "run-s _lint:root _lint:rest",
+    "pkg-check": "manypkg check",
+    "pkg-fix": "manypkg fix",
     "postdeploy": "turbo run postdeploy",
     "prepare": "husky install",
     "storybook": "turbo run storybook",
@@ -41,10 +43,11 @@
     "_lint:root": "eslint '**/*.{js,jsx,ts,tsx}' --ignore-pattern '/apps/' --ignore-pattern '/packages/' --ignore-pattern '/plugins/'",
     "_lint:root:fix": "npm run --silent _lint:root -- --fix"
   },
-  "devDependencies": {
+  "dependencies": {
     "@code-shaper/nextjs": "^1.1.3",
     "@code-shaper/react": "^1.1.7",
     "@commitlint/cz-commitlint": "^17.8.1",
+    "@manypkg/cli": "latest",
     "@typescript-eslint/eslint-plugin": "^5.62.0",
     "code-shaper": "latest",
     "commitizen": "^4.3.0",
