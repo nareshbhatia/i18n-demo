@@ -17,12 +17,12 @@ export default function Home() {
         <CardContent>
           <form>
             <div className="grid w-full items-center gap-6">
-              <div className="flex flex-col space-y-1.5">
+              <div className="flex flex-col space-y-2">
                 <Label htmlFor="pickup-location">Pickup spot</Label>
                 <Input id="pickup-location" />
               </div>
 
-              <div className="flex flex-col space-y-1.5">
+              <div className="flex flex-col space-y-2">
                 <Label htmlFor="dropoff-location">Your destination</Label>
                 <Input id="dropoff-location" />
               </div>
