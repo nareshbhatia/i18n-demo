@@ -2,20 +2,29 @@
 
 A sample app to demonstrate i18n & l10n concepts using some popular libraries.
 
-> Note: only English and German translations are currently working. For some
-> reason, Arabic, Spanish, Hindi & Italian translations are not working.
-
 #### Screenshot - English
 
 ![Screenshot - English](assets/screenshot-en.png)
+
+#### Screenshot - Arabic
+
+![Screenshot - Arabic](assets/screenshot-ar.png)
 
 #### Screenshot - German
 
 ![Screenshot - German](assets/screenshot-de.png)
 
-#### Screenshot - Arabic
+#### Screenshot - Hindi
 
-![Screenshot - Arabic](assets/screenshot-ar.png)
+![Screenshot - Hindi](assets/screenshot-hi.png)
+
+#### Screenshot - Italian
+
+![Screenshot - Italian](assets/screenshot-it.png)
+
+#### Screenshot - Spanish
+
+![Screenshot - Spanish](assets/screenshot-es.png)
 
 ## Prerequisites for development
 
