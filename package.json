@@ -1,6 +1,6 @@
 {
   "name": "i18n-demo",
-  "description": "i18n Demo",
+  "description": "A sample app to demonstrate i18n & l10n concepts using some popular libraries",
   "version": "0.0.1",
   "private": true,
   "repository": {
