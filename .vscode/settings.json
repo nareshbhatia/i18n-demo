@@ -5,6 +5,7 @@
     "commitlint",
     "copyfiles",
     "dropoff",
+    "formatjs",
     "languagedetector",
     "Lngs",
     "lucide",
