@@ -42,6 +42,7 @@ npm run dev    # run apps and storybook
 Open browser windows at the following URLs to see the respective apps:
 
 1. http://localhost:3000/: driverless using i18next
+2. http://localhost:3001/: driverless using formatjs
 
 ## Production build
 

@@ -1,3 +1,4 @@
+import { getIntl } from './intl';
 import { AppHeader } from '@/components/AppHeader';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -8,10 +9,16 @@ import * as React from 'react';
 // This will generally come from an auth provider
 const username = 'Naresh';
 
-export default function HomePage() {
+export interface HomePageProps {
+  params: { locale: string };
+}
+
+export default async function HomePage({ params: { locale } }: HomePageProps) {
+  const intl = await getIntl(locale, 'default');
+
   return (
     <div className="mx-auto flex max-w-xl flex-col gap-10 px-4">
-      <AppHeader title="driverless" />
+      <AppHeader title={intl.formatMessage({ id: 'app-name' })} />
 
       <Card>
         <CardHeader>
