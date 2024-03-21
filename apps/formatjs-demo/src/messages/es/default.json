@@ -1,1 +1,7 @@
-{ "app-name": "sin conductor" }
+{
+  "app-name": "sin conductor",
+  "pickup-spot": "Lugar de recogida",
+  "request-ride": "SOLICITAR VIAJE",
+  "where-to": "¿Adónde, {username}?",
+  "your-destination": "Tu destino"
+}

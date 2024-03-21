@@ -1,1 +1,7 @@
-{ "app-name": "بدون سائق" }
+{
+  "app-name": "بدون سائق",
+  "pickup-spot": "مكان الالتقاط",
+  "request-ride": "طلب ركوب",
+  "where-to": "إلى أين يا {username}؟",
+  "your-destination": "وجهتك"
+}

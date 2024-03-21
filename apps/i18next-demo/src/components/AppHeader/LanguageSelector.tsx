@@ -30,7 +30,7 @@ export function LanguageSelector({ className }: SelectTriggerProps) {
           className
         )}
       >
-        <SelectValue placeholder="Select style" />
+        <SelectValue placeholder="Select language" />
       </SelectTrigger>
       <SelectContent>
         {languageOptions.map((option) => (

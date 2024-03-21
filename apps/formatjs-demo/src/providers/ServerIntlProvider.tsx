@@ -1,13 +1,11 @@
-'use client';
-
+import type { ReactNode } from 'react';
+import type { MessageFormatElement } from 'react-intl';
 import { IntlProvider } from 'react-intl';
 
 export interface ServerIntlProviderProps {
-  // TODO: what is the right type?
-  messages: Record<string, string>;
-  // TODO: where is the Locale type?
+  messages: Record<string, MessageFormatElement[]> | Record<string, string>;
   locale: string;
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
 export function ServerIntlProvider({

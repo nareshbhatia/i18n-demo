@@ -1,1 +1,7 @@
-{ "app-name": "चालक रहित" }
+{
+  "app-name": "चालक रहित",
+  "pickup-spot": "पिकअप स्थान",
+  "request-ride": "सवारी का अनुरोध करें",
+  "where-to": "कहां जाएं, {username}?",
+  "your-destination": "तुम्हारी मंजिल"
+}

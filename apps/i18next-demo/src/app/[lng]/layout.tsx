@@ -3,29 +3,8 @@ import { useTranslation } from '@/i18n';
 import { languages, fallbackLng } from '@/i18n/settings';
 import { dir } from 'i18next';
 import { Inter, Roboto_Mono as RobotoMono } from 'next/font/google';
+
 import './globals.css';
-
-// eslint-disable-next-line @typescript-eslint/require-await
-export async function generateStaticParams() {
-  return languages.map((lng) => ({ lng }));
-}
-
-export async function generateMetadata({
-  params: { lng },
-}: {
-  params: {
-    lng: string;
-  };
-}) {
-  if (!languages.includes(lng)) lng = fallbackLng;
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  const { t } = await useTranslation(lng);
-  return {
-    title: t('title'),
-    content:
-      'A playground to explore new Next.js 13/14 app directory features such as nested layouts, instant loading states, streaming, and component level data fetching.',
-  };
-}
 
 /*
  * Load the fonts using next/font/google. For details, see
@@ -40,6 +19,29 @@ const robotoMono = RobotoMono({
   variable: '--font-roboto-mono',
 });
 
+// eslint-disable-next-line @typescript-eslint/require-await
+export async function generateStaticParams() {
+  return languages.map((lng) => ({ lng }));
+}
+
+interface GenerateMetadataProps {
+  params: {
+    lng: string;
+  };
+}
+
+export async function generateMetadata({
+  params: { lng },
+}: GenerateMetadataProps) {
+  if (!languages.includes(lng)) lng = fallbackLng;
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const { t } = await useTranslation(lng);
+  return {
+    title: t('title'),
+    content: 'A playground to explore i18n concepts',
+  };
+}
+
 interface RootLayoutProps {
   children: React.ReactNode;
   params: {
@@ -47,15 +49,12 @@ interface RootLayoutProps {
   };
 }
 
-export default function RootLayout({
-  children,
-  params: { lng },
-}: RootLayoutProps) {
+export default function RootLayout({ children, params }: RootLayoutProps) {
   return (
     <html
       className={`${inter.variable} ${robotoMono.variable}`}
-      dir={dir(lng)}
-      lang={lng}
+      dir={dir(params.lng)}
+      lang={params.lng}
       suppressHydrationWarning
     >
       <head />

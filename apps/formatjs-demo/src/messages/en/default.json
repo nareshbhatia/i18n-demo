@@ -1,1 +1,7 @@
-{ "app-name": "driverless" }
+{
+  "app-name": "driverless",
+  "pickup-spot": "Pickup spot",
+  "request-ride": "REQUEST RIDE",
+  "where-to": "Where to, {username}?",
+  "your-destination": "Your destination"
+}

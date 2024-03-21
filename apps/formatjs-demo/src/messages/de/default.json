@@ -1,1 +1,7 @@
-{ "app-name": "fahrerlos" }
+{
+  "app-name": "fahrerlos",
+  "pickup-spot": "Abholort",
+  "request-ride": "FAHRT ANFRAGEN",
+  "where-to": "Wohin, {username}?",
+  "your-destination": "Dein Ziel"
+}
