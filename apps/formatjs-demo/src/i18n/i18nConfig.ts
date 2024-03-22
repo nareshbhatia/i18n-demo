@@ -5,7 +5,7 @@ export const i18nConfig: Config = {
   defaultLocale: 'en',
 };
 
-export const languageOptions = [
+export const localeOptions = [
   {
     name: 'en',
     label: 'English',
@@ -31,7 +31,7 @@ export const languageOptions = [
     label: 'Italiano',
   },
 ];
-export type LanguageOption = (typeof languageOptions)[number];
+export type LocaleOption = (typeof localeOptions)[number];
 
 /*
  * TODO: Find a better way to get direction mapping.

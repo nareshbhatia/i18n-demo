@@ -40,6 +40,7 @@ export function middleware(req: NextRequest) {
       refererUrl.pathname.startsWith(`/${l}`)
     );
     const response = NextResponse.next();
+    // TODO: Find out why the cookie always lags behind by 1
     if (lngInReferer !== undefined)
       response.cookies.set(cookieName, lngInReferer);
     return response;

@@ -1,6 +1,7 @@
-import { ThemeProvider } from '@/components/theme-provider';
+import { AppHeader } from '@/components/AppHeader';
 import { useTranslation } from '@/i18n';
 import { languages, fallbackLng } from '@/i18n/settings';
+import { AppProvider } from '@/providers/AppProvider';
 import { dir } from 'i18next';
 import { Inter, Roboto_Mono as RobotoMono } from 'next/font/google';
 
@@ -37,7 +38,7 @@ export async function generateMetadata({
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const { t } = await useTranslation(lng);
   return {
-    title: t('title'),
+    title: t('app-name'),
     content: 'A playground to explore i18n concepts',
   };
 }
@@ -49,7 +50,14 @@ interface RootLayoutProps {
   };
 }
 
-export default function RootLayout({ children, params }: RootLayoutProps) {
+export default async function RootLayout({
+  children,
+  params,
+}: RootLayoutProps) {
+  let { lng } = params;
+  if (!languages.includes(lng)) lng = fallbackLng;
+  const { t } = await useTranslation(lng);
+
   return (
     <html
       className={`${inter.variable} ${robotoMono.variable}`}
@@ -59,14 +67,12 @@ export default function RootLayout({ children, params }: RootLayoutProps) {
     >
       <head />
       <body className="min-h-screen bg-background font-sans antialiased">
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          disableTransitionOnChange
-          enableSystem
-        >
-          {children}
-        </ThemeProvider>
+        <AppProvider>
+          <div className="mx-auto flex max-w-xl flex-col gap-10 px-4">
+            <AppHeader title={t('app-name')} />
+            {children}
+          </div>
+        </AppProvider>
       </body>
     </html>
   );
