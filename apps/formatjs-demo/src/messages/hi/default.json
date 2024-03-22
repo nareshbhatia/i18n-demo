@@ -1,7 +1,10 @@
 {
   "app-name": "चालक रहित",
+  "delivery": "वितरण",
   "pickup-spot": "पिकअप स्थान",
   "request-ride": "सवारी का अनुरोध करें",
+  "rides": "सवारी",
+  "what-would-you-like-to-eat": "आप क्या खाना चाहते हैं?",
   "where-to": "कहां जाएं, {username}?",
   "your-destination": "तुम्हारी मंजिल"
 }

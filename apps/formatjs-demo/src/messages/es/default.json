@@ -1,7 +1,10 @@
 {
   "app-name": "sin conductor",
+  "delivery": "Entrega",
   "pickup-spot": "Lugar de recogida",
   "request-ride": "SOLICITAR VIAJE",
+  "rides": "Paseos",
+  "what-would-you-like-to-eat": "¿Qué te gustaría comer?",
   "where-to": "¿Adónde, {username}?",
   "your-destination": "Tu destino"
 }

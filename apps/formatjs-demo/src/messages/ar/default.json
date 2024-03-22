@@ -1,7 +1,10 @@
 {
   "app-name": "بدون سائق",
+  "delivery": "توصيل",
   "pickup-spot": "مكان الالتقاط",
   "request-ride": "طلب ركوب",
+  "rides": "ركوب الخيل",
+  "what-would-you-like-to-eat": "ماذا تريد أن تأكل؟",
   "where-to": "إلى أين يا {username}؟",
   "your-destination": "وجهتك"
 }

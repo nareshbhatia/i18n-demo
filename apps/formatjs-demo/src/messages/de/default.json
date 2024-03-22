@@ -1,7 +1,10 @@
 {
   "app-name": "fahrerlos",
+  "delivery": "Lieferung",
   "pickup-spot": "Abholort",
   "request-ride": "FAHRT ANFRAGEN",
+  "rides": "Fahrten",
+  "what-would-you-like-to-eat": "Was möchten Sie essen?",
   "where-to": "Wohin, {username}?",
   "your-destination": "Dein Ziel"
 }

@@ -1,7 +1,10 @@
 {
   "app-name": "senza conducente",
+  "delivery": "Consegna",
   "pickup-spot": "Punto di ritiro",
   "request-ride": "RICHIEDI CORSA",
+  "rides": "Cavalcate",
+  "what-would-you-like-to-eat": "Cosa vorresti mangiare?",
   "where-to": "Dove andare, {username}?",
   "your-destination": "La tua destinazione"
 }

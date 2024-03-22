@@ -1,7 +1,10 @@
 {
   "app-name": "driverless",
+  "delivery": "Delivery",
   "pickup-spot": "Pickup spot",
   "request-ride": "REQUEST RIDE",
+  "rides": "Rides",
+  "what-would-you-like-to-eat": "What would you like to eat?",
   "where-to": "Where to, {username}?",
   "your-destination": "Your destination"
 }
