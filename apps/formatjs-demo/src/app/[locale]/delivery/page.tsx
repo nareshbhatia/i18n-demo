@@ -4,7 +4,7 @@ import { Icons } from '@/components/icons';
 import { Input } from '@/components/ui/input';
 import Link from 'next/link';
 import * as React from 'react';
-import { useIntl } from 'react-intl';
+import { useIntl, FormattedMessage } from 'react-intl';
 
 export default function DeliveryPage() {
   const intl = useIntl();
@@ -18,6 +18,7 @@ export default function DeliveryPage() {
             className="pl-8"
             placeholder={intl.formatMessage({
               id: 'what-would-you-like-to-eat',
+              defaultMessage: 'What would you like to eat?',
             })}
           />
         </div>
@@ -27,7 +28,7 @@ export default function DeliveryPage() {
           className="font-semibold text-foreground/60 transition-colors hover:text-foreground"
           href="/"
         >
-          {intl.formatMessage({ id: 'rides' })} &gt;
+          <FormattedMessage defaultMessage="Rides" id="rides" />
         </Link>
       </nav>
     </>

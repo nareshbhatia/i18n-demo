@@ -21,7 +21,10 @@ export default async function HomePage({ params: { locale } }: HomePageProps) {
       <Card>
         <CardHeader>
           <CardTitle>
-            {intl.formatMessage({ id: 'where-to' }, { username })}
+            {intl.formatMessage(
+              { id: 'where-to', defaultMessage: 'Where to, {username}?' },
+              { username }
+            )}
           </CardTitle>
         </CardHeader>
         <CardContent>
@@ -29,20 +32,29 @@ export default async function HomePage({ params: { locale } }: HomePageProps) {
             <div className="grid w-full items-center gap-6">
               <div className="flex flex-col space-y-2">
                 <Label htmlFor="pickup-location">
-                  {intl.formatMessage({ id: 'pickup-spot' })}
+                  {intl.formatMessage({
+                    id: 'pickup-spot',
+                    defaultMessage: 'Pickup spot',
+                  })}
                 </Label>
                 <Input id="pickup-location" />
               </div>
 
               <div className="flex flex-col space-y-2">
                 <Label htmlFor="dropoff-location">
-                  {intl.formatMessage({ id: 'your-destination' })}
+                  {intl.formatMessage({
+                    id: 'your-destination',
+                    defaultMessage: 'Your destination',
+                  })}
                 </Label>
                 <Input id="dropoff-location" />
               </div>
 
               <Button aria-label="Request Ride" type="submit">
-                {intl.formatMessage({ id: 'request-ride' })}
+                {intl.formatMessage({
+                  id: 'request-ride',
+                  defaultMessage: 'REQUEST RIDE',
+                })}
               </Button>
             </div>
           </form>
@@ -54,7 +66,8 @@ export default async function HomePage({ params: { locale } }: HomePageProps) {
           className="font-semibold text-foreground/60 transition-colors hover:text-foreground"
           href="/delivery"
         >
-          {intl.formatMessage({ id: 'delivery' })} &gt;
+          {intl.formatMessage({ id: 'delivery', defaultMessage: 'Delivery' })}{' '}
+          &gt;
         </Link>
       </nav>
     </>

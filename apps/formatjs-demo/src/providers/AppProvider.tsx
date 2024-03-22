@@ -1,8 +1,8 @@
 'use client';
 
-import { ServerIntlProvider } from './ServerIntlProvider';
 import { ThemeProvider } from './ThemeProvider';
 import { getIntl } from '@/i18n/intl';
+import { IntlProvider } from 'react-intl';
 
 export interface AppProviderProps {
   params: { locale: string };
@@ -22,9 +22,9 @@ export async function AppProvider({
       disableTransitionOnChange
       enableSystem
     >
-      <ServerIntlProvider locale={intl.locale} messages={intl.messages}>
+      <IntlProvider locale={intl.locale} messages={intl.messages}>
         {children}
-      </ServerIntlProvider>
+      </IntlProvider>
     </ThemeProvider>
   );
 }

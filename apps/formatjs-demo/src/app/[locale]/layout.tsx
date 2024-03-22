@@ -35,7 +35,7 @@ export async function generateMetadata({
   const intl = await getIntl(locale);
   if (!i18nConfig.locales.includes(locale)) locale = i18nConfig.defaultLocale;
   return {
-    title: intl.formatMessage({ id: 'app-name' }),
+    title: intl.formatMessage({ id: 'app-name', defaultMessage: 'driverless' }),
     content: 'A playground to explore i18n concepts',
   };
 }
@@ -47,12 +47,7 @@ interface RootLayoutProps {
   };
 }
 
-export default async function RootLayout({
-  children,
-  params,
-}: RootLayoutProps) {
-  const intl = await getIntl(params.locale);
-
+export default function RootLayout({ children, params }: RootLayoutProps) {
   return (
     <html
       className={`${inter.variable} ${robotoMono.variable}`}
@@ -64,7 +59,7 @@ export default async function RootLayout({
       <body className="min-h-screen bg-background font-sans antialiased">
         <AppProvider params={params}>
           <div className="mx-auto flex max-w-xl flex-col gap-10 px-4">
-            <AppHeader title={intl.formatMessage({ id: 'app-name' })} />
+            <AppHeader />
             {children}
           </div>
         </AppProvider>
