@@ -28,7 +28,7 @@ export default function DeliveryPage() {
           className="font-semibold text-foreground/60 transition-colors hover:text-foreground"
           href="/"
         >
-          <FormattedMessage defaultMessage="Rides" id="rides" />
+          <FormattedMessage defaultMessage="Rides" id="rides" /> &gt;
         </Link>
       </nav>
     </>

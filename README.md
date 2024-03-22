@@ -2,6 +2,11 @@
 
 A sample app to demonstrate i18n & l10n concepts using some popular libraries.
 
+### Live Demos
+
+1. [FormatJS](https://i18n-demo-formatjs-demo.vercel.app/)
+2. [i18next](https://i18n-demo-i18next-demo.vercel.app)
+
 #### Screenshot - English
 
 ![Screenshot - English](assets/screenshot-en.png)
