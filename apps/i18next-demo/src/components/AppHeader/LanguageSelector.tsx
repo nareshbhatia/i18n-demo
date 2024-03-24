@@ -7,7 +7,6 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
-import type { LanguageOption } from '@/i18n/settings';
 import { languageOptions } from '@/i18n/settings';
 import { cn } from '@/lib/utils';
 import type { SelectTriggerProps } from '@radix-ui/react-select';
@@ -18,12 +17,12 @@ export function LanguageSelector({ className }: SelectTriggerProps) {
   const router = useRouter();
   const { lng } = useParams<{ lng: string }>();
 
-  function handleValueChange(value: LanguageOption['name']) {
+  function handleLanguageChange(value: string) {
     router.push(`/${value}`);
   }
 
   return (
-    <Select onValueChange={handleValueChange} value={lng}>
+    <Select onValueChange={handleLanguageChange} value={lng}>
       <SelectTrigger
         className={cn(
           'h-7 w-[145px] text-xs [&_svg]:h-4 [&_svg]:w-4',
@@ -34,7 +33,11 @@ export function LanguageSelector({ className }: SelectTriggerProps) {
       </SelectTrigger>
       <SelectContent>
         {languageOptions.map((option) => (
-          <SelectItem className="text-xs" key={option.name} value={option.name}>
+          <SelectItem
+            className="text-xs"
+            key={option.value}
+            value={option.value}
+          >
             {option.label}
           </SelectItem>
         ))}

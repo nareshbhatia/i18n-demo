@@ -7,31 +7,30 @@ export const i18nConfig: Config = {
 
 export const localeOptions = [
   {
-    name: 'en',
+    value: 'en',
     label: 'English',
   },
   {
-    name: 'ar',
+    value: 'ar',
     label: 'عربي',
   },
   {
-    name: 'de',
+    value: 'de',
     label: 'Deutsch',
   },
   {
-    name: 'es',
+    value: 'es',
     label: 'Español',
   },
   {
-    name: 'hi',
+    value: 'hi',
     label: 'हिंदी',
   },
   {
-    name: 'it',
+    value: 'it',
     label: 'Italiano',
   },
 ];
-export type LocaleOption = (typeof localeOptions)[number];
 
 /*
  * TODO: Find a better way to get direction mapping.
